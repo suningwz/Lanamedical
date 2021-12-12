@@ -254,7 +254,7 @@
                             <tr t-att-class="'bg-200 font-weight-bold o_line_section' if line.display_type == 'line_section' else 'font-italic o_line_note' if line.display_type == 'line_note' else ''">
                                 <t t-if="not line.display_type" name="account_invoice_line_accountable">
                                     <td name="account_invoice_line_name">
-                                        <span t-field="line.product_id.name" t-options="{'widget': 'text'}"/>
+                                        <span t-field="line.name" t-options="{'widget': 'text'}"/>
                                         <t t-if="line.product_id.name != line.with_context(lang='ar_001').product_id.name">
                                             <br/>
                                             <span t-field="line.with_context(lang='ar_001').product_id.name"
